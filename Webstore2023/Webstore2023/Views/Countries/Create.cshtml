@@ -1,0 +1,32 @@
+﻿@model Webstore2023.Data.Entities.Country
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = null;
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">                
+                <input asp-for="Name" class="form-control" placeholder="Nombre" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <hr />
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary d-flex justify-content-center mx-auto my-auto w-100">Guardar</button>
+                <a asp-action="Index" class="btn btn-success d-flex justify-content-center mx-auto my-auto w-100">Cancelar</a>
+                <hr />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
